@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  font-size: 16px;
+  background-color: #fff;
+  color: #000;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.board {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 33vmin);
+  grid-template-rows: repeat(3, 33vmin);
+}
+
+.square {
+  background-color: purple;
+  border-top: 3px solid orange;
+  border-left: 3px solid orange;;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+
+.square:nth-child(3n) {
+  border-right: 3px solid orange;
+}
+
+.square:nth-last-child(-n+3) {
+  border-bottom: 3px solid orange;
+}
